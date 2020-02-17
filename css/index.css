@@ -1,3 +1,345 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	max-width:100%; 
+  }
+
+body {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+	
+}
+
+header, section, footer, .mainPic {
+	width: 80%;
+}
+
+.mainPic img{
+	margin: 5% 0;
+	width: 100%;
+}
+
+
+header{
+	display: flex;
+    margin: 3% 0;
+	
+	justify-content: space-between;
+
+}
+
+header nav{
+	display: flex;
+
+	width: 75%;
+	color:grey;
+	padding: 1%;
+	justify-content: space-between;
+}
+
+nav a{
+	font-size: 14px;
+	color: grey;
+	text-decoration: none;
+}
+nav a:hover{
+	color: darkblue;
+}
+
+
+p, address{
+	line-height: 1.5;
+	font-family: 'Roboto', sans-serif;
+}
+
+.boxes{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.boxes .box{
+	width: 48%;
+	border: 1px solid black;
+	background-color: #f2f2f2;
+	padding: 2%;
+	margin: 1%;
+}
+
+.boxes .learn{
+	font-size: 12px;
+	border: 1px solid black;
+	text-align: center;
+padding: 2% 2%;
+width: 30%;
+background-color: white;
+border-radius: 7px;
+margin-top: 3%;
+}
+
+
+.first {
+	display: flex; 
+	justify-content: space-around;
+	padding: 5% 0;
+	
+
+
+}
+.first #left h1{
+	font-size: 70px;
+	text-align: center;
+
+}
+
+.first #left #start{
+    width: 75%;
+    margin-left: 12%;
+    
+}
+
+.first #left {
+	display: flex; 
+    flex-direction: column;
+justify-content: space-around;
+}
+.first p{
+	font-size: 18px;
+	border: 1px solid black;
+	text-align: center;
+padding: 1% 2%;
+
+}
+
+
+
+.first p:hover{
+	animation-name:start;
+   animation-duration:0.8s;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+  
+}
+
+@keyframes start{
+  0% {background-color: #e6e6ff;}
+  25% {background-color: #8080ff;}
+  50% {background-color: #3333ff;}
+  50% {background-color:  #0000b3;}
+  100% {background-color:  #000066; color: white;}
+}
+
+.second {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+
+}
+.second #top .item{
+    width: 49%
+
+}
+
+.second #bottom .item{
+    width: 30%
+
+}
+
+.second #top{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+    padding: 5% 0%;
+
+}
+
+.second #bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0;
+
+}
+
+.second img{
+	width: 100%;
+}
+
+ul{
+	list-style-type: disc;
+	line-height: 30px;
+	list-style-position: inside;
+}
+
+.facts{
+	display: flex;
+
+}
+
+.facts div{
+	width: 50%;
+	padding: 1%;
+
+}
+.facts img{
+	width: 100%;
+}
+
+.facts #factText{
+	padding: 2%;
+}
+
+footer{
+	padding: 3% 1%; 
+}
+
+
+
+footer p#copy {
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+header, section, footer, .mainPic {
+    width: 90%;
+    }
+header {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header img{
+    padding-bottom: 3%;
+}
+header nav{
+    width: 100%;
+}
+.first div img{
+    display: none;
+}
+.first{
+    justify-content: center;
+    padding-bottom: 7%;
+    
+}
+
+
+
+}
+
+@media (max-width: 500px){
+    header, section, footer, .mainPic {
+        width: 96%;
+        }
+    header nav a{
+        padding: 4% 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid lightgrey;
+    }
+    header nav a:last-child{
+        border-bottom: 1px solid lightgrey;
+    }
+    header nav{
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .first #left h1{
+        font-size: 60px;
+    }
+   
+    .first {
+        margin-bottom: 8%;
+    }
+
+    .second #top, #bottom{
+        flex-direction: column;
+    
+    }
+
+    .second p{
+        font-size: 12px;
+
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .second #top .item{
+        width: 100%;
+        padding: 4% 0;
+    }
+
+
+    .second #bottom .item{
+        width: 100%;
+        padding: 4% 0;
+    }
+
+}
